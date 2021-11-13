@@ -1,3 +1,4 @@
+import 'package:cadastro_exercicio/components/custom_drop_down.component.dart';
 import 'package:cadastro_exercicio/components/custom_text_form.compoent.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -11,7 +12,6 @@ final List<String> inputsLabels = [
   "Full Name",
   "Email Address",
   "Mobile Number",
-  "Country",
   "Password",
   "Confirm Password",
   "Referal Code"
@@ -26,7 +26,8 @@ class FormRegister extends StatelessWidget {
         child: Column(
       children: [
         ...inputsLabels
-            .map((e) => CustomTextForm(props: CustonTextFormProps(e, validate)))
+            .map((e) => CustomTextForm(props: CustonTextFormProps(e, validate))),
+        CustomDropDown(items: ["BR", "US"], hint: "country",)
       ],
     ));
   }

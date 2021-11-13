@@ -1,3 +1,4 @@
+import 'package:cadastro_exercicio/components/custom_button.compont.dart';
 import 'package:cadastro_exercicio/components/icon_color_component.dart';
 import 'package:cadastro_exercicio/components/icon_comeback.component.dart';
 import 'package:cadastro_exercicio/components/title.component.dart';
@@ -25,7 +26,8 @@ class _RegisterState extends State<Register> {
           children: [
             IconComeback(),
             MyTitle(text: "Register"),
-            FormRegister()
+            FormRegister(),
+            CustomButton(text: "register")
           ],
         ),
       )
