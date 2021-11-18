@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
-
+  static const route = "/register";
   @override
   _RegisterState createState() => _RegisterState();
 }
@@ -18,19 +18,18 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: COLORS_UTIL.WHITE,
-      body: Container(
-        padding: EdgeInsets.fromLTRB(19, 0, 19, 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            IconComeback(),
-            MyTitle(text: "Register"),
-            FormRegister(),
-            CustomButton(text: "register")
-          ],
-        ),
-      )
-    );
+        backgroundColor: COLORS_UTIL.WHITE,
+        body: Container(
+          padding: EdgeInsets.fromLTRB(19, 0, 19, 0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconComeback(),
+              MyTitle(text: "Register"),
+              FormRegister(),
+              CustomButton(text: "register")
+            ],
+          ),
+        ));
   }
 }
