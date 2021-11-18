@@ -3,6 +3,7 @@ import 'package:cadastro_exercicio/components/custom_button.compont.dart';
 import 'package:cadastro_exercicio/components/icon_comeback.component.dart';
 import 'package:cadastro_exercicio/components/title.component.dart';
 import 'package:cadastro_exercicio/pages/register/section/register.form.dart';
+import 'package:cadastro_exercicio/pages/verification/verification.page.dart';
 import 'package:cadastro_exercicio/utils/colors.utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,11 +16,14 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  _goToVerify(BuildContext context) {
+    Navigator.pushNamed(context, Verification.route);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: COLORS_UTIL.WHITE,
-        appBar: CustomAppBar(),
         body: Container(
           padding: EdgeInsets.fromLTRB(19, 0, 19, 0),
           child: Column(
@@ -28,7 +32,10 @@ class _RegisterState extends State<Register> {
               IconComeback(),
               MyTitle(text: "Register"),
               FormRegister(),
-              CustomButton(text: "register")
+              CustomButton(
+                text: "register",
+                onPressed: _goToVerify,
+              )
             ],
           ),
         ));

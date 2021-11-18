@@ -17,7 +17,7 @@ class CustomTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 30),
+      margin: EdgeInsets.only(bottom: 20),
       child: TextFormField(
         validator: props.validate,
         cursorColor: COLORS_UTIL.RED,

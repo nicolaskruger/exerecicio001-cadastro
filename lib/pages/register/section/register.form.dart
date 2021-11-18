@@ -25,9 +25,12 @@ class FormRegister extends StatelessWidget {
     return Form(
         child: Column(
       children: [
-        ...inputsLabels
-            .map((e) => CustomTextForm(props: CustonTextFormProps(e, validate))),
-        CustomDropDown(items: ["BR", "US"], hint: "country",)
+        CustomDropDown(
+          items: ["BR", "US"],
+          hint: "country",
+        ),
+        ...inputsLabels.map(
+            (e) => CustomTextForm(props: CustonTextFormProps(e, validate))),
       ],
     ));
   }
