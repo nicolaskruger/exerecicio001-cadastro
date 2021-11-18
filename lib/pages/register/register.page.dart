@@ -1,5 +1,5 @@
+import 'package:cadastro_exercicio/components/custom_app_barr.componet.dart';
 import 'package:cadastro_exercicio/components/custom_button.compont.dart';
-import 'package:cadastro_exercicio/components/icon_color_component.dart';
 import 'package:cadastro_exercicio/components/icon_comeback.component.dart';
 import 'package:cadastro_exercicio/components/title.component.dart';
 import 'package:cadastro_exercicio/pages/register/section/register.form.dart';
@@ -19,6 +19,7 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: COLORS_UTIL.WHITE,
+        appBar: CustomAppBar(),
         body: Container(
           padding: EdgeInsets.fromLTRB(19, 0, 19, 0),
           child: Column(

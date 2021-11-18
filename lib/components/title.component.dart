@@ -8,11 +8,12 @@ class MyTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        color: COLORS_UTIL.BLACK,
-        fontSize: 30
+    return Container(
+      margin: EdgeInsets.fromLTRB(0, 10, 0, 50),
+      child: Text(
+        text,
+        textAlign: TextAlign.start,
+        style: TextStyle(color: COLORS_UTIL.BLACK, fontSize: 30),
       ),
     );
   }
