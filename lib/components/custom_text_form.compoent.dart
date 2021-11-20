@@ -16,16 +16,17 @@ class CustomTextForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final inputDecoration = Theme.of(context).inputDecorationTheme;
     return Container(
       margin: EdgeInsets.only(bottom: 20),
       child: TextFormField(
         validator: props.validate,
         cursorColor: COLORS_UTIL.RED,
         decoration: InputDecoration(
-            labelText: props.label,
-            labelStyle: TextStyle(color: COLORS_UTIL.GREY),
-            focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: COLORS_UTIL.RED))),
+          labelText: props.label,
+          labelStyle: inputDecoration.labelStyle,
+          focusedBorder: inputDecoration.focusedBorder,
+        ),
       ),
     );
   }

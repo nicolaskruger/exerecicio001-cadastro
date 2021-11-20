@@ -1,5 +1,6 @@
 import 'package:cadastro_exercicio/utils/colors.utils.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class MyTitle extends StatelessWidget {
   final String text;
@@ -14,7 +15,7 @@ class MyTitle extends StatelessWidget {
       child: Text(
         text,
         textAlign: TextAlign.start,
-        style: TextStyle(color: COLORS_UTIL.BLACK, fontSize: 30),
+        style: Theme.of(context).textTheme.headline1,
       ),
     );
   }

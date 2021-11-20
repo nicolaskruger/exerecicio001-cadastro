@@ -4,6 +4,7 @@ import 'package:cadastro_exercicio/components/custom_text_form.compoent.dart';
 import 'package:cadastro_exercicio/components/title.component.dart';
 import 'package:cadastro_exercicio/pages/login/section/login.form.dart';
 import 'package:cadastro_exercicio/pages/login/section/login.link.dart';
+import 'package:cadastro_exercicio/pages/register/register.page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,8 +37,16 @@ class _LoginState extends State<Login> {
           LoginForm(
             props: [...loginProps],
           ),
-          CustomButton(text: "login"),
-          LoginLink()
+          LoginLink(),
+          SizedBox(
+            height: 30,
+          ),
+          CustomButton(
+            text: "login",
+            onPressed: (context) {
+              Navigator.pushNamed(context, Register.route);
+            },
+          ),
         ],
       ),
     ));
